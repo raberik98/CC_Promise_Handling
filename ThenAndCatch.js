@@ -66,3 +66,11 @@ fakeFetchData(2).then((resp1) => {
 // })
 // .catch((error) => {console.log(error + " This is the outer catch branch.");})
 
+//Now I would like you to try to refactor the code, where the console.log()-s are outside of the then() branches. I will wait for you to see what happens.
+//As you can see it takes some time for the fetch to return the data we need, even if we don't notice how quick it is.
+//We can see that this is the case because the console.log()-s will appear first on the console and only then we will see the data being shown.
+
+//Conclusion: like this we can't really control the order in which we want to execute our code unless we put everything inside of a then() branch, 
+//which can be hard to follow when we nest even more code after inside of these then() branches.
+//But on the other side we can get away with not using an async function to fetch data.
+//As the next part of this guide, please continue your studies by observing the AsyncAwait.js file. 
